@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/teddyStats"
+        android:layout_width="358dp"
+        android:layout_height="177dp"
+        android:alpha=".3"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/teddyStats3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:layout_constraintVertical_bias="0.19"
+        app:srcCompat="@drawable/object_bg" />
+
+    <ImageView
+        android:id="@+id/teddyStats3"
+        android:layout_width="359dp"
+        android:layout_height="276dp"
+        android:alpha=".15"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/settingsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:layout_constraintVertical_bias="0.96"
+        app:srcCompat="@drawable/object_bg" />
+
+    <ImageView
+        android:id="@+id/teddyMain"
+        android:layout_width="102dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyStats"
+        app:layout_constraintStart_toStartOf="@+id/teddyStats"
+        app:layout_constraintTop_toTopOf="@+id/teddyStats"
+        app:srcCompat="@drawable/teddy_bear" />
+
+    <ImageView
+        android:id="@+id/bowTie"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyMain"
+        app:layout_constraintEnd_toEndOf="@+id/teddyMain"
+        app:layout_constraintStart_toStartOf="@+id/teddyMain"
+        app:layout_constraintTop_toTopOf="@+id/teddyMain"
+        app:srcCompat="@drawable/bowtie1" />
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="228dp"
+        android:layout_height="139dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyStats"
+        app:layout_constraintEnd_toEndOf="@+id/teddyStats"
+        app:layout_constraintStart_toEndOf="@+id/teddyMain"
+        app:layout_constraintTop_toTopOf="@+id/teddyStats">
+
+        <ImageView
+            android:id="@+id/teddyNameBoxMain"
+            android:layout_width="161dp"
+            android:layout_height="33dp"
+            android:layout_margin="5dp"
+            android:alpha="1"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/object_bg" />
+
+        <TextView
+            android:id="@+id/teddyNameTxtMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:paddingLeft="10dp"
+            android:text="NAME: TEDDY"
+            android:textColor="@android:color/background_light"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center_vertical"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/missionBoxMain"
+            android:layout_width="181dp"
+            android:layout_height="33dp"
+            android:layout_margin="5dp"
+            android:alpha="1"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/object_bg" />
+
+        <ImageView
+            android:id="@+id/missionBoxHeartMain"
+            android:layout_width="35dp"
+            android:layout_height="22dp"
+            android:layout_margin="5dp"
+            android:alpha="1"
+            android:paddingRight="10dp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="right"
+            app:layout_row="1"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/sparkling_heart" />
+
+        <TextView
+            android:id="@+id/missionTxtMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:paddingLeft="10dp"
+            android:text="MISSION: TO MAKE YOU HAPPY"
+            android:textColor="@android:color/background_light"
+            android:textSize="12sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center_vertical"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/notifCountBoxMain"
+            android:layout_width="161dp"
+            android:layout_height="33dp"
+            android:layout_margin="5dp"
+            android:alpha="1"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/object_bg" />
+
+        <TextView
+            android:id="@+id/notifCountTxtMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:paddingLeft="10dp"
+            android:text="NOTIFICATIONS SENT: 0"
+            android:textColor="@android:color/background_light"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center_vertical"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/mailBtn"
+        android:layout_width="60dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="openMail"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/mail" />
+
+    <ImageView
+        android:id="@+id/settingsBtn"
+        android:layout_width="60dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="openSettings"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/settings" />
+
+    <ImageView
+        android:id="@+id/generateNowBtn"
+        android:layout_width="326dp"
+        android:layout_height="75dp"
+        android:onClick="generateMsg"
+        app:layout_constraintBottom_toTopOf="@+id/teddyStats3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teddyStats"
+        app:layout_constraintVertical_bias="0.7"
+        app:srcCompat="@drawable/generate_btn" />
+
+    <TextView
+        android:id="@+id/generateNowBtnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="GENERATE NOW"
+        android:textColor="@android:color/background_light"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="@+id/generateNowBtn"
+        app:layout_constraintEnd_toEndOf="@+id/generateNowBtn"
+        app:layout_constraintStart_toStartOf="@+id/generateNowBtn"
+        app:layout_constraintTop_toTopOf="@+id/generateNowBtn" />
+
+    <TextView
+        android:id="@+id/genNowExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="Need a positive message now?"
+        android:textColor="@color/nice_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/generateNowBtn"
+        app:layout_constraintEnd_toEndOf="@+id/generateNowBtn"
+        app:layout_constraintStart_toStartOf="@+id/generateNowBtn" />
+
+    <TextView
+        android:id="@+id/generateNowBtnTxt2"
+        android:layout_width="308dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:gravity="center"
+        android:scaleType="fitXY"
+        android:text="What should I focus on addressing?"
+        android:textColor="@color/nice_blue"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/teddyStats3"
+        app:layout_constraintStart_toStartOf="@+id/teddyStats3"
+        app:layout_constraintTop_toTopOf="@+id/teddyStats3" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="315dp"
+        android:layout_height="149dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyStats3"
+        app:layout_constraintEnd_toEndOf="@+id/teddyStats3"
+        app:layout_constraintStart_toStartOf="@+id/teddyStats3"
+        app:layout_constraintTop_toBottomOf="@+id/generateNowBtnTxt2">
+
+        <ImageView
+            android:id="@+id/depressionState"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="updateDepressionState"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/white" />
+
+        <ImageView
+            android:id="@+id/anxietyState"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="updateAnxietyState"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_row="2"
+            app:srcCompat="@drawable/white" />
+
+        <ImageView
+            android:id="@+id/insecurityState"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="updateInsecurityState"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_row="3"
+            app:srcCompat="@drawable/white" />
+
+        <TextView
+            android:id="@+id/depression"
+            android:layout_width="306dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:scaleType="fitXY"
+            android:text="Depression / Self-love"
+            android:textColor="@color/nice_blue"
+            android:textSize="20sp"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/anxiety"
+            android:layout_width="306dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:scaleType="fitXY"
+            android:text="Anxiety / Stress"
+            android:textColor="@color/nice_blue"
+            android:textSize="20sp"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/insecurity"
+            android:layout_width="306dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:scaleType="fitXY"
+            android:text="Insecurity"
+            android:textColor="@color/nice_blue"
+            android:textSize="20sp"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/redDot"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mailBtn"
+        app:layout_constraintEnd_toEndOf="@+id/mailBtn"
+        app:srcCompat="@drawable/notification_count" />
+
+    <TextView
+        android:id="@+id/emailCount"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/franklin_gothic_heavy_regular"
+        android:text="2"
+        android:textColor="@android:color/background_light"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/redDot"
+        app:layout_constraintEnd_toEndOf="@+id/redDot"
+        app:layout_constraintStart_toStartOf="@+id/redDot"
+        app:layout_constraintTop_toTopOf="@+id/redDot" />
+
+    <ImageView
+        android:id="@+id/emailBg"
+        android:visibility="visible"
+        android:layout_width="363dp"
+        android:layout_height="602dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:srcCompat="@drawable/email_bg" />
+
+    <ImageView
+        android:id="@+id/emailX"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:onClick="closeMail"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/emailBg"
+        app:layout_constraintTop_toTopOf="@+id/emailBg"
+        app:srcCompat="@drawable/x" />
+
+    <TextView
+        android:id="@+id/messagesTxt"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="Messages"
+        android:textColor="@color/nice_blue"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/generateNowBtn"
+        app:layout_constraintStart_toStartOf="@+id/generateNowBtn"
+        app:layout_constraintTop_toTopOf="@+id/emailBg" />
+
+    <ImageView
+        android:id="@+id/likedMsgsBox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:onClick="changeAdapterToLiked"
+        android:tint="@color/unselected_mail"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/prettyEmailBg"
+        app:layout_constraintEnd_toStartOf="@+id/dislikedMsgsBox"
+        app:srcCompat="@drawable/change_msgs_box" />
+
+    <ImageView
+        android:id="@+id/likedMsgs"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/likedMsgsBox"
+        app:layout_constraintEnd_toEndOf="@+id/likedMsgsBox"
+        app:layout_constraintStart_toStartOf="@+id/likedMsgsBox"
+        app:layout_constraintTop_toTopOf="@+id/likedMsgsBox"
+        app:srcCompat="@drawable/sparkling_heart" />
+
+    <ImageView
+        android:id="@+id/dislikedMsgsBox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:onClick="changeAdapterToDisliked"
+        android:tint="@color/unselected_mail"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/prettyEmailBg"
+        app:layout_constraintEnd_toEndOf="@+id/prettyEmailBg"
+        app:srcCompat="@drawable/change_msgs_box" />
+
+    <ImageView
+        android:id="@+id/dislikedMsgs"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/dislikedMsgsBox"
+        app:layout_constraintEnd_toEndOf="@+id/dislikedMsgsBox"
+        app:layout_constraintStart_toStartOf="@+id/dislikedMsgsBox"
+        app:layout_constraintTop_toTopOf="@+id/dislikedMsgsBox"
+        app:srcCompat="@drawable/thumb_down" />
+
+    <ImageView
+        android:id="@+id/pastMsgsBox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:onClick="changeAdapterToAllMsgs"
+        android:visibility="visible"
+        android:tint="@color/selected_email"
+        app:layout_constraintBottom_toTopOf="@+id/prettyEmailBg"
+        app:layout_constraintEnd_toStartOf="@+id/likedMsgsBox"
+        app:srcCompat="@drawable/change_msgs_box" />
+
+    <ImageView
+        android:id="@+id/pastMsgs"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/pastMsgsBox"
+        app:layout_constraintEnd_toEndOf="@+id/pastMsgsBox"
+        app:layout_constraintStart_toStartOf="@+id/pastMsgsBox"
+        app:layout_constraintTop_toTopOf="@+id/pastMsgsBox"
+        app:srcCompat="@drawable/mail" />
+
+    <ImageView
+        android:id="@+id/prettyEmailBg"
+        android:visibility="visible"
+        android:layout_width="290dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="32dp"
+        android:alpha=".4"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/emailBg"
+        app:layout_constraintStart_toStartOf="@+id/emailBg"
+        app:layout_constraintTop_toBottomOf="@+id/messagesTxt"
+        app:srcCompat="@drawable/object_bg" />
+
+
+    <TextView
+        android:id="@+id/pressAndHoldPrompt"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="Press and hold a message for more options."
+        android:textColor="@color/nice_blue"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/exitEmailGL"
+        app:layout_constraintEnd_toEndOf="@+id/generateNowBtn"
+        app:layout_constraintStart_toStartOf="@+id/generateNowBtn"
+        app:layout_constraintTop_toBottomOf="@+id/prettyEmailBg"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/exitEmailGL"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/emailBg"
+        app:layout_constraintEnd_toEndOf="@+id/teddyStats3"
+        app:layout_constraintStart_toStartOf="@+id/teddyStats3"
+        app:layout_constraintTop_toBottomOf="@+id/prettyEmailBg"
+        app:layout_constraintVertical_bias="0.65999997">
+
+        <ImageView
+            android:id="@+id/clearAllBtn"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:onClick="deleteAllMail"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/delete_btn" />
+
+        <TextView
+            android:id="@+id/ClearAllBtnTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="CLEAR ALL"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:onClick="deleteSelMail"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1"
+            app:srcCompat="@drawable/delete_btn" />
+
+
+        <TextView
+            android:id="@+id/DeleteBtnTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="DELETE"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ListView
+        android:id="@+id/emailListView"
+        android:layout_width="265dp"
+        android:layout_height="375dp"
+        android:alpha=".6"
+        android:background="@color/lighter_blue"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/prettyEmailBg"
+        app:layout_constraintEnd_toEndOf="@+id/prettyEmailBg"
+        app:layout_constraintStart_toStartOf="@+id/prettyEmailBg"
+        app:layout_constraintTop_toTopOf="@+id/prettyEmailBg" />
+
+    <TextView
+        android:id="@+id/noMsgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="No mail"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/emailListView"
+        app:layout_constraintEnd_toEndOf="@+id/emailListView"
+        app:layout_constraintStart_toStartOf="@+id/emailListView"
+        app:layout_constraintTop_toTopOf="@+id/emailListView"
+        app:layout_constraintVertical_bias=".5" />
+
+    <ImageView
+        android:id="@+id/settingsBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".65"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/black" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/topSettingsOptions"
+        android:layout_width="350dp"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998">
+
+        <TextView
+            android:id="@+id/MuteSfxTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="Mute sfx"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="right|center_vertical"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/sfxState"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="fitXY"
+            android:onClick="updateSfxState"
+            app:layout_column="1"
+            app:layout_gravity="left|center_vertical"
+            app:layout_row="0"
+            app:srcCompat="@drawable/white" />
+
+        <ImageView
+            android:id="@+id/musicState"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="updateMusicState"
+            android:scaleType="fitXY"
+            app:layout_column="1"
+            app:layout_gravity="left|center_vertical"
+            app:layout_row="1"
+            app:srcCompat="@drawable/white" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:scaleType="fitXY"
+            android:text="Name"
+            android:textColor="@color/nice_blue"
+            app:layout_column="1"
+            app:layout_gravity="left|center_vertical"
+            app:layout_row="2" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextDate"-->
+<!--            android:layout_width="160dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            android:background="@android:color/background_light"-->
+<!--            android:fontFamily="@font/gill_sans_ultra_bold_condensed"-->
+<!--            android:ems="10"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:inputType="date"-->
+<!--            app:layout_gravity="left|center_vertical"-->
+<!--            app:layout_column="1"-->
+<!--            app:layout_row="3" />-->
+
+        <TextView
+            android:id="@+id/birthDate"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@android:color/background_light"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="center_vertical"
+            android:inputType="date"
+            android:paddingLeft="10dp"
+            android:scaleType="fitXY"
+            android:text="mm/dd/yyyy"
+            android:textColor="@color/nice_blue"
+            android:textSize="18sp"
+            app:layout_column="1"
+            app:layout_gravity="left|center_vertical"
+            app:layout_row="3" />
+
+
+        <TextView
+            android:id="@+id/MuteMusicTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="Mute music"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="right|center_vertical"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/changeNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="Change name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="right|center_vertical"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+
+        <TextView
+            android:id="@+id/birthdayTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:text="Your Birthday"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="right|center_vertical"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:visibility="invisible"
+        android:id="@+id/settingsP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topSettingsOptions"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/changeTeddyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="center"
+            android:text="Change Teddy's Name"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/teddyEditText"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="35dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:scaleType="fitXY"
+            android:text="Teddy"
+            android:textColor="@color/nice_blue"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/bowtieBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="openBowTiePanel"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bowtie_btn" />
+
+        <TextView
+            android:id="@+id/changeTeddyBTTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="center"
+            android:text="Change Teddy's Bow Tie Color"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2" />
+
+
+        <TextView
+            android:id="@+id/notifFreqHeaderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="center"
+            android:text="Notification Frequency"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            app:layout_rowWeight="1" />
+
+        <ImageView
+            android:id="@+id/notifFreqBox"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="4"
+            app:srcCompat="@drawable/white" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="4" />
+
+        <ImageView
+            android:id="@+id/notifFreqBox2"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="25dp"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="5"
+            app:srcCompat="@drawable/white" />
+
+
+        <TextView
+            android:id="@+id/notifFreqTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+            android:gravity="top"
+            android:text="One Every Week"
+            android:textColor="@color/nice_blue"
+            android:textSize="15sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_gravity="center_horizontal|top"
+            app:layout_row="5"
+            app:layout_rowWeight="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/exitSettings"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:onClick="closeSettings"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toBottomOf="@+id/settingsP2"
+        app:srcCompat="@drawable/exit_settings" />
+
+    <TextView
+        android:id="@+id/exitSettingsBtnTxt"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="OK"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exitSettings"
+        app:layout_constraintEnd_toEndOf="@+id/exitSettings"
+        app:layout_constraintStart_toStartOf="@+id/exitSettings"
+        app:layout_constraintTop_toTopOf="@+id/exitSettings" />
+
+    <ImageView
+        android:id="@+id/bowTiePanelStroke"
+        android:visibility="invisible"
+        android:layout_width="367dp"
+        android:layout_height="510dp"
+        android:alpha=".5"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/bowTiePanel"
+        android:visibility="invisible"
+        android:layout_width="357dp"
+        android:layout_height="500dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:srcCompat="@drawable/white" />
+
+    <ImageView
+        android:id="@+id/teddyBg"
+        android:visibility="invisible"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:alpha=".1"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/bowTiePanel"
+        app:layout_constraintStart_toStartOf="@+id/bowTiePanel"
+        app:layout_constraintTop_toTopOf="@+id/bowTiePanel"
+        app:srcCompat="@drawable/black" />
+
+    <ImageView
+        android:id="@+id/teddyBowTieActor"
+        android:visibility="invisible"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyBg"
+        app:layout_constraintStart_toStartOf="@+id/teddyBg"
+        app:layout_constraintTop_toTopOf="@+id/teddyBg"
+        app:layout_constraintEnd_toEndOf="@+id/teddyBg"
+        app:srcCompat="@drawable/teddy_bear" />
+
+    <ImageView
+        android:id="@+id/bowTie2"
+        android:visibility="invisible"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/teddyBowTieActor"
+        app:layout_constraintEnd_toEndOf="@+id/teddyBowTieActor"
+        app:layout_constraintStart_toStartOf="@+id/teddyBowTieActor"
+        app:layout_constraintTop_toTopOf="@+id/teddyBowTieActor"
+        app:srcCompat="@drawable/bowtie1" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/bowTieCollection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/leaveBowTiePanel"
+        app:layout_constraintEnd_toEndOf="@+id/bowTiePanel"
+        app:layout_constraintStart_toStartOf="@+id/bowTiePanel"
+        app:layout_constraintTop_toBottomOf="@+id/teddyBg">
+
+
+        <ImageView
+            android:id="@+id/bowtie1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            android:onClick="updateBowTie"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bowtie1" />
+
+        <ImageView
+            android:id="@+id/bowtie2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="1"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bowtie2" />
+
+        <ImageView
+            android:id="@+id/bowtie3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:onClick="updateBowTie"
+            android:layout_marginBottom="20dp"
+            app:layout_column="2"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bowtie3" />
+
+        <ImageView
+            android:id="@+id/bowtie4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="3"
+            app:layout_gravity="center"
+            android:onClick="updateBowTie"
+            app:layout_row="0"
+            app:srcCompat="@drawable/bowtie4" />
+
+        <ImageView
+            android:id="@+id/bowtie5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            android:onClick="updateBowTie"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bowtie5" />
+
+        <ImageView
+            android:id="@+id/bowtie6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="1"
+            app:layout_gravity="center"
+            android:onClick="updateBowTie"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bowtie6" />
+
+        <ImageView
+            android:id="@+id/bowtie7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="2"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bowtie7" />
+
+        <ImageView
+            android:id="@+id/bowtie8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="3"
+            app:layout_gravity="center"
+            android:onClick="updateBowTie"
+            app:layout_row="1"
+            app:srcCompat="@drawable/bowtie8" />
+
+        <ImageView
+            android:id="@+id/bowtie9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="0"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bowtie9" />
+
+        <ImageView
+            android:id="@+id/bowtie10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="1"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bowtie10" />
+
+        <ImageView
+            android:id="@+id/bowtie11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="2"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bowtie11" />
+
+        <ImageView
+            android:id="@+id/bowtie12"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            app:layout_column="3"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:srcCompat="@drawable/bowtie12" />
+
+
+        <ImageView
+            android:id="@+id/bowtie13"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            app:layout_column="0"
+            android:onClick="updateBowTie"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            app:srcCompat="@drawable/bowtie13" />
+
+        <ImageView
+            android:id="@+id/bowtie14"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_column="1"
+            android:onClick="updateBowTie"
+            app:layout_row="3"
+            app:srcCompat="@drawable/bowtie14" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/leaveBowTiePanel"
+        android:layout_width="116dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="closeBowTiePanel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/bowTiePanel"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:srcCompat="@drawable/exit_settings" />
+
+    <TextView
+        android:id="@+id/leaveBowTiePanel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="DONE"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/leaveBowTiePanel"
+        app:layout_constraintEnd_toEndOf="@+id/leaveBowTiePanel"
+        app:layout_constraintStart_toStartOf="@+id/leaveBowTiePanel"
+        app:layout_constraintTop_toTopOf="@+id/leaveBowTiePanel" />
+
+    <ImageView
+        android:id="@+id/moreOptionsPanel"
+        android:layout_width="245dp"
+        android:layout_height="260dp"
+        android:onClick="closeBowTiePanel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/prettyEmailBg"
+        app:layout_constraintEnd_toEndOf="@+id/bg"
+        app:layout_constraintStart_toStartOf="@+id/bg"
+        app:layout_constraintTop_toTopOf="@id/prettyEmailBg"
+        app:srcCompat="@drawable/more_options_menu" />
+
+    <ImageView
+        android:id="@+id/textBox"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
+        android:onClick="closeBowTiePanel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/moreOptionsPanel"
+        app:layout_constraintEnd_toEndOf="@+id/moreOptionsPanel"
+        app:layout_constraintStart_toStartOf="@+id/moreOptionsPanel"
+        app:layout_constraintTop_toTopOf="@id/moreOptionsPanel"
+        app:layout_constraintVertical_bias="0.29000002"
+        app:srcCompat="@drawable/text_box" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/msg"-->
+<!--        android:layout_width="190dp"-->
+<!--        android:layout_height="90dp"-->
+<!--        android:fontFamily="@font/gill_sans_ultra_bold_condensed"-->
+<!--        android:gravity="center"-->
+<!--        android:text="DONE"-->
+<!--        android:textColor="@color/nice_blue"-->
+<!--        android:textSize="17sp"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/textBox"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textBox"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textBox" />-->
+    <ListView
+        android:id="@+id/msg"
+        android:layout_width="190dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:gravity="center"
+        android:textColor="@color/nice_blue"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textBox"
+        app:layout_constraintStart_toStartOf="@+id/textBox"
+        app:layout_constraintTop_toTopOf="@+id/textBox" />
+
+    <ImageView
+        android:id="@+id/likeBtn"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="likeMsg"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textBox"
+        app:layout_constraintStart_toStartOf="@id/moreOptionsPanel"
+        app:srcCompat="@drawable/options_button" />
+
+    <TextView
+        android:id="@+id/likeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="LIKE"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/likeBtn"
+        app:layout_constraintEnd_toEndOf="@+id/likeBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/likeBtn"
+        app:layout_constraintStart_toStartOf="@+id/likeBtn" />
+
+    <ImageView
+        android:id="@+id/dislikeBtn"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="8dp"
+        android:onClick="dislikeMsg"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textBox"
+        app:layout_constraintEnd_toEndOf="@+id/moreOptionsPanel"
+        app:srcCompat="@drawable/options_button" />
+
+    <TextView
+        android:id="@+id/dislikeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="DISLIKE"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/dislikeBtn"
+        app:layout_constraintEnd_toEndOf="@+id/dislikeBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/dislikeBtn"
+        app:layout_constraintStart_toStartOf="@+id/dislikeBtn" />
+
+    <ImageView
+        android:id="@+id/shareBtn"
+        android:layout_width="85dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="shareMsg"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/moreOptionsPanel"
+        app:layout_constraintStart_toStartOf="@+id/moreOptionsPanel"
+        app:layout_constraintEnd_toEndOf="@+id/moreOptionsPanel"
+        app:srcCompat="@drawable/options_button" />
+
+    <TextView
+        android:id="@+id/shareTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="SHARE"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/shareBtn"
+        app:layout_constraintEnd_toEndOf="@+id/shareBtn"
+        app:layout_constraintBottom_toBottomOf="@+id/shareBtn"
+        app:layout_constraintStart_toStartOf="@+id/shareBtn" />
+
+    <TextView
+        android:id="@+id/likeStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:text="LIKED"
+        android:textColor="@color/lighter_blue"
+        android:textSize="17sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/textBox"
+        app:layout_constraintEnd_toEndOf="@+id/textBox" />
+
+    <ImageView
+        android:id="@+id/moreOptionsX"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:onClick="closeMoreOptionsPanel"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/moreOptionsPanel"
+        app:layout_constraintTop_toTopOf="@+id/moreOptionsPanel"
+        app:srcCompat="@drawable/x" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

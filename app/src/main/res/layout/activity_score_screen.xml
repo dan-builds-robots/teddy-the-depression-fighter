@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScoreScreen">
+
+    <ImageView
+        android:id="@+id/topBanner"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_banner_bg" />
+
+    <TextView
+        android:id="@+id/depressionScoreHeader"
+        android:layout_width="333dp"
+        android:layout_height="68dp"
+        android:fontFamily="@font/tcceb"
+        android:text="Your Depression Score"
+        android:gravity="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topBanner"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topBanner" />
+
+    <TextView
+        android:id="@+id/depressionScore"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="@color/dark_blue"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBanner" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="229dp"
+        android:layout_height="51dp"
+        android:scaleY="3"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/depressionScore" />
+
+
+    <TextView
+        android:id="@+id/diagnosis"
+        android:layout_width="334dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="Please get help."
+        android:textColor="@color/dark_blue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <ImageView
+        android:id="@+id/bottomBanner"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/top_banner_bg" />
+
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/hotlineGridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/bottomBanner"
+        app:layout_constraintStart_toStartOf="@+id/bottomBanner"
+        app:layout_constraintTop_toTopOf="@+id/bottomBanner">
+
+        <TextView
+            android:id="@+id/moreInfo1"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/tcceb"
+            android:gravity="right"
+            android:text="More info"
+            android:textColor="@color/dark_blue"
+            android:textSize="15dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/numberBg1"
+            android:layout_width="333dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="callSAMHSA"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            app:srcCompat="@drawable/object_bg" />
+
+        <TextView
+            android:id="@+id/number1"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/tcceb"
+            android:gravity="center"
+            android:text="SAMHSA’s National Helpline 1-800-662-HELP (4357)"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1" />
+
+        <TextView
+            android:id="@+id/moreInfo2"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/tcceb"
+            android:gravity="right"
+            android:text="More info"
+            android:textColor="@color/dark_blue"
+            android:textSize="15dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/numberBg2"
+            android:layout_width="333dp"
+            android:layout_height="80dp"
+            android:onClick="callNSP"
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            app:srcCompat="@drawable/object_bg" />
+
+        <TextView
+            android:id="@+id/number2"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tcceb"
+            android:gravity="center"
+            android:text="National Suicide Prevention 1-800-273-TALK (8255)"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="3" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+    <ImageView
+        android:id="@+id/okBtnBg"
+        android:layout_width="120dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:onClick="goHome"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotlineGridLayout"
+        android:tint="@color/dark_blue"
+        app:srcCompat="@drawable/rect_resp_btn_white" />
+
+    <TextView
+        android:id="@+id/okBtnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/okBtnBg"
+        app:layout_constraintEnd_toEndOf="@+id/okBtnBg"
+        app:layout_constraintStart_toStartOf="@+id/okBtnBg"
+        app:layout_constraintTop_toTopOf="@+id/okBtnBg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

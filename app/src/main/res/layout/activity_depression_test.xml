@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testProgress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DepressionTest">
+
+    <ImageView
+        android:id="@+id/topBanner"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_banner_bg" />
+
+
+    <ImageView
+        android:id="@+id/checklist"
+        android:layout_width="45dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/checklist" />
+
+    <TextView
+        android:id="@+id/freeExam"
+        android:layout_width="291dp"
+        android:layout_height="44dp"
+        android:fontFamily="@font/tcceb"
+        android:text="FREE Professional Depression Screening Examination"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/topBanner"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toEndOf="@+id/checklist"
+        app:layout_constraintTop_toTopOf="@+id/topBanner" />
+
+    <TextView
+        android:id="@+id/question_topic"
+        android:layout_width="291dp"
+        android:layout_height="44dp"
+        android:fontFamily="@font/gill_sans_ultra_bold_condensed"
+        android:gravity="center"
+        android:text="A. Mood"
+        android:textColor="@color/dark_blue"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/question_description"
+        android:layout_width="303dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="Over the past two weeks, how often have you been bothered by the following problem:"
+        android:textColor="@color/dark_blue"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_topic" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="229dp"
+        android:layout_height="51dp"
+        android:scaleY="2"
+        android:max="10"
+        android:progress="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBanner" />
+
+    <ImageView
+        android:id="@+id/x"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:onClick="goHome"
+        app:layout_constraintEnd_toStartOf="@+id/question_topic"
+        app:layout_constraintTop_toTopOf="@+id/question_topic"
+        app:srcCompat="@drawable/gray_x" />
+
+    <ImageView
+        android:id="@+id/questionBg"
+        android:layout_width="364dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="13dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_description"
+        app:srcCompat="@drawable/question_bg" />
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="75dp"
+        android:layout_height="41dp"
+        android:onClick="updateQuestion"
+        android:tag="BACK"
+        app:layout_constraintBottom_toTopOf="@+id/btn_bg"
+        app:layout_constraintStart_toStartOf="@+id/questionBg"
+        app:layout_constraintTop_toBottomOf="@+id/questionBg"
+        app:srcCompat="@drawable/left_arrow" />
+
+
+    <TextView
+        android:id="@+id/backArrowTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="BACK"
+        android:textColor="@android:color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+        app:layout_constraintEnd_toEndOf="@+id/backArrow"
+        app:layout_constraintStart_toStartOf="@+id/backArrow"
+        app:layout_constraintTop_toTopOf="@+id/backArrow" />
+
+
+    <ImageView
+        android:id="@+id/nextArrow"
+        android:layout_width="75dp"
+        android:layout_height="41dp"
+        android:onClick="updateQuestion"
+        android:tag="NEXT"
+        app:layout_constraintBottom_toTopOf="@+id/btn_bg"
+        app:layout_constraintEnd_toEndOf="@+id/questionBg"
+        app:layout_constraintTop_toBottomOf="@+id/questionBg"
+        app:srcCompat="@drawable/right_arrow" />
+
+    <TextView
+        android:id="@+id/nextArrowTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="NEXT"
+        android:textColor="@android:color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nextArrow"
+        app:layout_constraintEnd_toEndOf="@+id/nextArrow"
+        app:layout_constraintStart_toStartOf="@+id/nextArrow"
+        app:layout_constraintTop_toTopOf="@+id/nextArrow" />
+
+    <ImageView
+        android:id="@+id/submitBtn"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:scaleType="fitXY"
+        android:onClick="submit"
+        app:layout_constraintBottom_toTopOf="@+id/btn_bg"
+        app:layout_constraintEnd_toStartOf="@+id/nextArrow"
+        app:layout_constraintStart_toEndOf="@+id/backArrow"
+        app:layout_constraintTop_toBottomOf="@+id/questionBg"
+        app:layout_gravity="center"
+        app:srcCompat="@drawable/rect_resp_btn" />
+
+
+    <TextView
+        android:id="@+id/submitBtnTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="SUBMIT"
+        android:textColor="@android:color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/submitBtn"
+        app:layout_constraintEnd_toEndOf="@+id/submitBtn"
+        app:layout_constraintStart_toStartOf="@+id/submitBtn"
+        app:layout_constraintTop_toTopOf="@+id/submitBtn" />
+
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="335dp"
+        android:layout_height="131dp"
+        android:fontFamily="@font/tcceb"
+        android:gravity="center"
+        android:text="Has your mood been depressed lately?"
+        android:textColor="@color/dark_blue"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/questionBg"
+        app:layout_constraintEnd_toEndOf="@+id/topBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionBg" />
+
+
+    <ImageView
+        android:id="@+id/btn_bg"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/btn_bg" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_bg">
+
+        <ImageView
+            android:id="@+id/choiceA"
+            android:layout_width="353dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="updateResponses"
+            android:scaleType="fitXY"
+            android:tag="Never"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            android:tint="@color/lighter_blue"
+            app:srcCompat="@drawable/rect_resp_btn_white" />
+
+        <TextView
+            android:id="@+id/choiceATxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tcceb"
+            android:text="Not at all"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"
+            android:layout_marginBottom="12dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="0"
+            app:layout_constraintBottom_toBottomOf="@+id/questionBg"
+            app:layout_constraintEnd_toEndOf="@+id/topBanner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/questionBg" />
+
+        <ImageView
+            android:id="@+id/choiceB"
+            android:layout_width="353dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="updateResponses"
+            android:scaleType="fitXY"
+            android:tag="Less Than Half"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            android:tint="@color/lighter_blue"
+            app:srcCompat="@drawable/rect_resp_btn_white" />
+
+
+        <TextView
+            android:id="@+id/choiceBTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tcceb"
+            android:text="Less than half the days"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"
+            android:layout_marginBottom="12dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="1"
+            app:layout_constraintBottom_toBottomOf="@+id/questionBg"
+            app:layout_constraintEnd_toEndOf="@+id/topBanner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/questionBg" />
+
+        <ImageView
+            android:id="@+id/choiceC"
+            android:layout_width="353dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="12dp"
+            android:onClick="updateResponses"
+            android:scaleType="fitXY"
+            android:tag="More Than Half"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            android:tint="@color/lighter_blue"
+            app:srcCompat="@drawable/rect_resp_btn_white" />
+
+
+        <TextView
+            android:id="@+id/choiceCTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tcceb"
+            android:text="More than half the days"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"
+            android:layout_marginBottom="12dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="2"
+            app:layout_constraintBottom_toBottomOf="@+id/questionBg"
+            app:layout_constraintEnd_toEndOf="@+id/topBanner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/questionBg" />
+
+        <ImageView
+            android:id="@+id/choiceD"
+            android:layout_width="353dp"
+            android:layout_height="40dp"
+            android:onClick="updateResponses"
+            android:scaleType="fitXY"
+            android:tag="every day"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            android:tint="@color/lighter_blue"
+            app:srcCompat="@drawable/rect_resp_btn_white" />
+
+        <TextView
+            android:id="@+id/choiceDTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tcceb"
+            android:text="Nearly every day"
+            android:textColor="@android:color/white"
+            android:textSize="22dp"
+            app:layout_column="0"
+            app:layout_gravity="center"
+            app:layout_row="3"
+            app:layout_constraintBottom_toBottomOf="@+id/questionBg"
+            app:layout_constraintEnd_toEndOf="@+id/topBanner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/questionBg" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
